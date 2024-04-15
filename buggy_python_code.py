@@ -8,11 +8,6 @@ app = flask.Flask(__name__)
 
 
 @app.route("/")
-def index():
-    version = flask.request.args.get("urllib_version")
-    url = flask.request.args.get("url")
-    return fetch_website(version, url)
-
         
 CONFIG = {"API_KEY": "771df488714111d39138eb60df756e6b"}
 class Person(object):
@@ -64,3 +59,12 @@ if __name__ == '__main__':
     elif choice == "4":
         password = input("Enter master password: ")
         authenticate(password)
+
+
+
+"""
+def index():
+    version = flask.request.args.get("urllib_version")
+    url = flask.request.args.get("url")
+    return fetch_website(version, url)
+"""
